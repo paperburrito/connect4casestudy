@@ -1,0 +1,182 @@
+/* line 5, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/base.scss */
+html {
+  font-family: Arial;
+  height: 100%;
+}
+
+/* line 14, ../sass/base.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff url("../img/tiny_grid.png");
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+/* line 22, ../sass/base.scss */
+h2 {
+  color: #000;
+  line-height: 50px;
+  font-size: 42px;
+}
+
+/* line 28, ../sass/base.scss */
+p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* line 34, ../sass/base.scss */
+.full {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 39, ../sass/base.scss */
+nav {
+  padding-top: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+/* line 44, ../sass/base.scss */
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 47, ../sass/base.scss */
+nav li a {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+/* line 3, ../sass/connect4.scss */
+.opponents {
+  width: 100%;
+  padding: 20px 0;
+  background: #000;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* line 12, ../sass/connect4.scss */
+.current_turn {
+  text-align: left;
+  background: #fff;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+/* line 19, ../sass/connect4.scss */
+.current_turn span {
+  margin-left: 10px;
+}
+
+/* line 24, ../sass/connect4.scss */
+#message {
+  color: red;
+  float: right;
+  display: none;
+  margin-right: 5px;
+}
+
+/* line 31, ../sass/connect4.scss */
+.player1 {
+  color: red;
+}
+
+/* line 35, ../sass/connect4.scss */
+.player2 {
+  color: yellow;
+}
+
+/* line 39, ../sass/connect4.scss */
+table {
+  display: table;
+  border: 1px solid #00f;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* line 46, ../sass/connect4.scss */
+td {
+  padding: 30px;
+  background-image: url("../img/game.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+/* line 52, ../sass/connect4.scss */
+td.player1 {
+  background-color: red;
+}
+/* line 55, ../sass/connect4.scss */
+td.player2 {
+  background-color: yellow;
+}

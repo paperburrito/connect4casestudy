@@ -6,12 +6,23 @@ from django.db import models
 
 # Create your models here.
 
+# USERS------
+# Normally I would us abstraction of the user model and  do away with the username of logins.
+# BUT because it's a game, I think we shouldn't let the oposition see a competitor's email address, griefing and stuff.
+# You know, the "highly competitive" world of Connect 4.
+
+IN_PROGRESS = "A"
+COMPLETE = "C"
+
+STATUS_OPTIONS = ((IN_PROGRESS, "in progress"),
+                                      (COMPLETE, "complete"))
+
 @python_2_unicode_compatible
 class Game(models.Model):
     player1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='player_1')
     player2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='player_2', blank=True, null=True)
-    status = models.CharField(max_length=10)
-    winner = models.CharField(max_length=10)
+    status = models.CharField(max_length=1, choices=STATUS_OPTIONS, default=IN_PROGRESS)
+    winner = models.ForeignKey(User, null=True)
     created_date = models.DateTimeField(default=timezone.now)
 
 
@@ -62,3 +73,8 @@ class Coin(models.Model):
         return ' '.join([
             self.player, 'to', self.row, self.column
         ])
+
+
+
+
+

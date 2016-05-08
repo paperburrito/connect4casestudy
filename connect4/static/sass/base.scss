@@ -1,0 +1,53 @@
+// standard sass/compass files
+// Logo font from https://www.behance.net/gallery/29835665/Cornerstone-Free-Font
+@import "compass/reset";
+@import "compass/css3";
+
+// These are the base and key components that are on all pages.
+// @import "_base";
+
+html{
+    font-family:Arial;
+    height:100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #fff url("../img/tiny_grid.png");
+    margin:0;
+    height: 100%;
+    position:relative;
+}
+
+h2{
+    color:#000;
+    line-height:50px;
+    font-size:42px;
+}
+
+p{
+    font-size:16px;
+    line-height:18px;
+}
+
+
+.full{
+    width:1024px;
+    margin:0 auto;
+}
+
+nav{
+    padding-top:20px;
+    font-size:18px;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+    li{
+        display:inline;
+        margin-right:10px;
+        a{
+            color:#2e2e2e;
+            text-decoration:none;
+
+        }
+    }
+}

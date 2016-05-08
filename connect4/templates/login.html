@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" media="screen" type="text/css" href='{% static "css/user.css"%}' />
+{% endblock %}
+
+{% block content %}
+    <h2>Login</h2>
+    <section class="main_container">
+    <form method="POST" action="{% url 'login' %}{% if next %}?next={{next}}{% endif %}" class="inputs" autocomplete="on">
+        {{ FORM.as_p }}
+        <input type="submit" class="submit" value="Submit"/>
+        {% csrf_token %}
+    </form>
+</section>
+</section>
+{% endblock %}

@@ -1,0 +1,62 @@
+@import "base";
+
+.opponents{
+    width:100%;
+    padding: 20px 0;
+    background:#000;
+    color:#fff;
+    font-size:24px;
+    text-align:center;
+}
+
+.current_turn{
+    text-align:left;
+    background:#fff;
+    width:100%;
+    padding: 10px 0;
+    border-bottom:1px solid #000;
+
+    span{
+        margin-left:10px;
+    }
+}
+
+#message{
+    color:red;
+    float:right;
+    display:none;
+    margin-right:5px;
+}
+
+.player1{
+    color:red;
+}
+
+.player2{
+    color:yellow;
+}
+
+table {
+   display: table;
+   border: 1px solid #00f;
+   margin: 0 auto;
+   margin-top:30px;
+}
+
+td{
+    padding:30px;
+    background-image: url("../img/game.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    cursor:pointer;
+    &.player1{
+        background-color: red;
+    }
+    &.player2{
+        background-color: yellow;
+    }
+}
+
+
+
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+<link rel="stylesheet" media="screen" type="text/css" href='{% static "css/user.css"%}' />
+{% endblock %}
+
+{% block content %}
+    <h2>Sign up</h2>
+    <form method="POST" action="{% url 'signup' %}" autocomplete="on">
+        {{ FORM.as_p }}
+        <input type="submit" class="submit" value="Submit"/>
+        {% csrf_token %}
+    </form>
+{% endblock %}
+
+

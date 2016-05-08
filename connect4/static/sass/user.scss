@@ -1,0 +1,41 @@
+@import "base";
+
+form{
+    width:400px;
+    margin:0 auto;
+    background:#fff;
+    padding:20px;
+    border:1px solid #000;
+
+    margin-top:50px;
+
+    .helptext{
+        display:none;
+    }
+
+    input[type="submit"]{
+        background:green;
+        color:#fff;
+        margin:0 auto;
+        border:none;
+        padding:5px;
+        font-size:18px;
+        display:block;
+        margin-top:15px;
+        cursor:pointer;
+    }
+
+    p{
+        margin-top:5px;
+        input{
+            float:right;
+            width:70%;
+        }
+
+        &:after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+    }
+}

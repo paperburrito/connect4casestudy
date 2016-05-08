@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src='{% static "js/games_list.js"%}'></script>
+<link rel="stylesheet" media="screen" type="text/css" href='{% static "css/games.css"%}' />
+{% endblock %}
+
+{% block content %}
+<a id="new_game" href="{% url 'new_game' %}">New game</a>
+<section class="games" ng-app="gamesApp" ng-controller="gamesController">
+    <article class="currently_playing" data-url="{% url 'currently_playing' %}">
+        <div class="title">Your open games</div>
+        <header>
+            <span>Player 1</span>
+            <span>Player 2</span>
+        </header>
+        <li ng-repeat="game in currentlyPlaying">
+              <span>{[{game.player1}]}</span>
+              <span>{[{game.player2}]}</span>
+              <span class="btn"><a href='{[{game.link}]}'>Continue game</a></span>
+        </li>
+        <span class="message"></span>
+    </article>
+    <article class="available_games" data-url="{% url 'available_games' %}">
+        <div class="title">Your open games</div>
+        <header>
+            <span>Player 1</span>
+            <span>Player 2</span>
+        </header>
+        <li ng-repeat="game in availableGames">
+              <span>{[{game.player1}]}</span>
+              <span>{[{game.player2}]}</span>
+              <span class="btn"><a href='{[{game.link}]}'>Join game</a></span>
+        </li>
+        <span class="message"></span>
+    </article>
+    <article class="concluded_games" data-url="{% url 'concluded_games' %}">
+        <div class="title">Games you've finished</div>
+        <header>
+            <span>Player 1</span>
+            <span>Player 2</span>
+        </header>
+        <li ng-repeat="game in concludedGames">
+              <span>{[{game.player1}]}</span>
+              <span>{[{game.player2}]}</span>
+              <span class="btn"><a href='{[{game.link}]}'>View game</a></span>
+        </li>
+        <span class="message"></span>
+    </article>
+</section>
+{% endblock %}

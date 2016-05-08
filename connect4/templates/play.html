@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{%block css%}
+<link rel="stylesheet" media="screen" type="text/css" href='{% static "css/connect4.css"%}' />
+{% endblock %}
+{% block scripts %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src='{% static "js/game.js"%}'></script>
+{% endblock %}
+
+{% block content %}
+
+<section class="currentlyPlaying" ng-app="connect4App" ng-controller="connect4Controller">
+    <article  id="game" data-game-session-url='{% url "game_session" game_id=GAME.id %}'  data-add-coin-url='{% url "add_coin" game_id=GAME.id column=20 %}'>
+    <div class="opponents"><span class="player1">{[{gameSession.player1}]}</span> vs <span class="player2">{[{gameSession.player2}]}</span></div>
+    <div class="current_turn">
+        <span>{[{gameSession.player_turn}]} turn</span>
+        <div id="message"></div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in gameSession.game_instance">
+                  <td ng-repeat="cell in row" class="{[{cell}]}" ng-click="addCoin($index+1);"></td>
+            </tr>
+        </tbody>
+    </table>
+    </article>
+</section>
+{% endblock %}
